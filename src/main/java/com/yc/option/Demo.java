@@ -14,12 +14,12 @@ import java.nio.channels.FileChannel;
  */
 public class Demo {
     public static void main(String[] args) {
-        String path = "d:\\\\demo_test_dir\\test.jpg";
+        String path = "d:\\\\demo_test_dir\\test1.jpg";
         File file = new File(path);
         if(!file.isDirectory()){
             try {
                 FileChannel srcChannel = new FileInputStream(path).getChannel();
-                FileChannel dstChannel   =   new FileOutputStream("d:\\\\demo_test_dir\\test1.jpg").getChannel();
+                FileChannel dstChannel   =   new FileOutputStream("d:\\\\demo_test_dir\\test2.jpg").getChannel();
                 dstChannel.transferFrom(srcChannel,0,srcChannel.size());
                 srcChannel.close();
                 dstChannel.close();
