@@ -6,17 +6,10 @@ package com.yc.option;
  */
 public class ThreadDemoRunnable implements Runnable{
 
-    private String threadName;
-
-
-    public ThreadDemoRunnable(String name) {
-        this.threadName = name;
-    }
-
     public void run() {
 
         for (int i = 0; i < 5; i++) {
-            System.out.println(threadName+"------线程");
+            System.out.println(Thread.currentThread().getName());
         }
     }
 }

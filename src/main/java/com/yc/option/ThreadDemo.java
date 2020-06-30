@@ -7,9 +7,9 @@ package com.yc.option;
  */
 public class ThreadDemo {
     public static void main(String[] args) {
-        ThreadDemoRunnable t1 = new ThreadDemoRunnable("aaaaaa");
-        ThreadDemoRunnable t2 = new ThreadDemoRunnable("bbbbbb");
-        ThreadDemoRunnable t3 = new ThreadDemoRunnable("cccccc");
+        ThreadDemoRunnable t1 = new ThreadDemoRunnable();
+        ThreadDemoRunnable t2 = new ThreadDemoRunnable();
+        ThreadDemoRunnable t3 = new ThreadDemoRunnable();
         new Thread(t1).start();
         new Thread(t2).start();
         new Thread(t3).start();
